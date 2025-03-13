@@ -4,7 +4,7 @@ using namespace std;
 int arr[15];
 int n;
 
-void InputData(){
+void inputData(){
     while (true)
     {
         cout << "Masukkan jumlah data: ";
@@ -50,14 +50,32 @@ void bubbleSort() {
 
     pass = pass + 1; //step 4
     } while (pass <= n -1);
+
+    
+}
+
+void displayData()
+{
+    cout << endl;
+    cout << "=========================" << endl;
+    cout << "Data setelah diurutkan" << endl;
+    cout << "=========================" << endl;
+    cout << endl;
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << "Data ke-" << i + 1 << " = " << arr[i] << endl;
+    }
     
 }
 
 
-
 int main()
 {
-InputData();    
+    inputData();
+    bubbleSort();
+    displayData();
+return 0;
 }
 
 
